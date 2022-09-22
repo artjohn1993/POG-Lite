@@ -1,0 +1,102 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.generator.poglite"
+4    android:versionCode="1"
+5    android:versionName="1.10" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+11-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/debug/AndroidManifest.xml:4:5-5:60
+11-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/debug/AndroidManifest.xml:4:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:7:5-80
+13-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:7:22-77
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:8:5-81
+14-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+15-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:9:5-81
+15-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:9:22-78
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:10:5-79
+16-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:10:22-76
+17    <uses-permission android:name="android.permission.DELETE_CACHE_FILES" />
+17-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:11:5-13:47
+17-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:12:9-61
+18    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+18-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:14:5-16:47
+18-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:15:9-58
+19
+20    <application
+20-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:18:5-48:19
+21        android:allowBackup="true"
+21-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:19:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.2.0] /Users/tadashi/.gradle/caches/transforms-2/files-2.1/587ecb9ecef99d2fcb27af6533df14dd/core-1.2.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:hardwareAccelerated="true"
+24-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:20:9-43
+25        android:icon="@mipmap/ic_logo"
+25-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:21:9-39
+26        android:label="@string/app_name"
+26-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:22:9-41
+27        android:requestLegacyExternalStorage="true"
+27-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:23:9-52
+28        android:roundIcon="@mipmap/ic_logo"
+28-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:24:9-44
+29        android:supportsRtl="true"
+29-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:25:9-35
+30        android:theme="@style/Theme.WebOpener"
+30-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:26:9-47
+31        android:usesCleartextTraffic="true" >
+31-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:27:9-44
+32        <activity
+32-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:28:9-30:40
+33            android:name="com.generator.poglite.activity.WordpressLoaderActivity"
+33-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:29:13-82
+34            android:exported="false" />
+34-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:30:13-37
+35        <activity
+35-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:31:9-39:20
+36            android:name="com.generator.poglite.activity.SplashScreenActivity"
+36-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:32:13-79
+37            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+37-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:33:13-72
+38            <intent-filter>
+38-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:34:13-38:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:35:17-69
+39-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:35:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:37:17-77
+41-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:37:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <meta-data
+45-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:41:9-43:37
+46            android:name="android.webkit.WebView.EnableSafeBrowsing"
+46-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:42:13-69
+47            android:value="false" />
+47-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:43:13-34
+48
+49        <activity
+49-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:45:9-46:74
+50            android:name="com.generator.poglite.activity.MainActivity"
+50-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:45:19-77
+51            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+51-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:46:13-72
+52
+53        <service android:name="com.generator.poglite.services.IdleChecker" />
+53-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:47:9-57
+53-->/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/AndroidManifest.xml:47:18-54
+54    </application>
+55
+56</manifest>

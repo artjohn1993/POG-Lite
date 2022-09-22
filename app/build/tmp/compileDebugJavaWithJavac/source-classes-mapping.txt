@@ -1,0 +1,2 @@
+com/generator/poglite/BuildConfig.java
+ com.generator.poglite.BuildConfig

@@ -1,0 +1,158 @@
+[
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_custom_action_bar.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/custom_action_bar.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_activity_loader.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/activity_loader.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_activity_wordpress_loader.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/activity_wordpress_loader.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_logo.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-mdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_background_primary.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/background_primary.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_logo.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-hdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_activity_splash_screen.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_logo_no_background.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/logo_no_background.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_loader_view.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/loader_view.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_loader_lite_view.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/loader_lite_view.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_logo.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xxhdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_logo.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xhdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_pause.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/pause.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_process.gif.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/process.gif"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_pause2.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/pause2.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_webview_dialog.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/webview_dialog.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_time_picker.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/time_picker.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_close_app_dialog.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/close_app_dialog.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_logo.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/logo.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_play2.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/play2.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/layout_loading_url_checking.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/layout/loading_url_checking.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_round_play_button.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/round_play_button.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_logo.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-xxxhdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/build/intermediates/res/merged/debug/drawable_loading.gif.flat",
+        "source": "/Users/tadashi/Documents/Android/Page one lite (v020322)/app/src/main/res/drawable/loading.gif"
+    }
+]
