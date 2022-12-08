@@ -18,7 +18,11 @@ object Table{
     }
 
     enum class Table_Url {
-        URL { override fun getValue() = "url" };
+        URL { override fun getValue() = "url" },
+        DAYS { override fun getValue() = "days" },
+        PAGES { override fun getValue() = "pages" },
+        PAUSEFROM { override fun getValue() = "pausefrom" },
+        PAUSETO { override fun getValue() = "pauseto" };
         abstract fun getValue() : String
     }
 

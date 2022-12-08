@@ -7,11 +7,17 @@ class WordpressData {
 
     fun factorWordpress(
         data: List<Wordpress.Result>,
-        factor: Int
+        factor: Int,
+        isSingle: Boolean
     ): MutableList<Wordpress.Result> {
-        var total : Int = data.count()/10
-        if (data.count() < 10) {
-            total = 1
+        var total : Int = data.count()
+        if (total < factor) {
+            total = data.count()
+        } else {
+            total = factor
+        }
+        if (isSingle) {
+            total = factor
         }
         var newFactoredWordpress: MutableList<Wordpress.Result> = ArrayList()
         data.shuffled().forEach { item ->

@@ -4,15 +4,21 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.icu.util.Calendar
 import com.generator.poglite.enum.Table
 import com.generator.poglite.enum.WebOpenerDB
 import com.generator.poglite.model.RangeData
+import com.generator.poglite.model.URLData
 import com.generator.poglite.model.Wordpress
 
 class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpenerDB.DATABASE_NAME.getValue(), null, 1) {
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("CREATE TABLE " + WebOpenerDB.TABLE_URL.getValue() + " (" +
-                Table.Table_Url.URL.getValue() + " VARCHAR(200))"
+                Table.Table_Url.URL.getValue() + " VARCHAR(200)," +
+                Table.Table_Url.DAYS.getValue() + " VARCHAR(200)," +
+                Table.Table_Url.PAGES.getValue() + " VARCHAR(200)," +
+                Table.Table_Url.PAUSEFROM.getValue() + " VARCHAR(200)," +
+                Table.Table_Url.PAUSETO.getValue() + " VARCHAR(200))"
         )
 
         db?.execSQL("CREATE TABLE " + WebOpenerDB.TABLE_FACTOR.getValue() + " (" +
@@ -36,11 +42,15 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
 
     }
 
-    fun insertURL(data : String) : Boolean {
+    fun insertURL(data : URLData.Details) : Boolean {
         val db = this.writableDatabase
         var url = ContentValues()
 
-        url.put(Table.Table_Url.URL.getValue(), data)
+        url.put(Table.Table_Url.URL.getValue(), data.url)
+        url.put(Table.Table_Url.DAYS.getValue(), data.days)
+        url.put(Table.Table_Url.PAGES.getValue(), data.pages)
+        url.put(Table.Table_Url.PAUSEFROM.getValue(), data.pauseFrom)
+        url.put(Table.Table_Url.PAUSETO.getValue(), data.pauseTo)
         var result = db.insert(WebOpenerDB.TABLE_URL.getValue(), null , url)
         db.close()
         return result != (-1).toLong()
@@ -81,13 +91,31 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
         return result != (-1).toLong()
     }
 
-    fun getURL() : MutableList<String>{
-        val list : MutableList<String> = ArrayList()
+    fun getURL() : MutableList<URLData.Details>{
+        val list : MutableList<URLData.Details> = ArrayList()
         val db = this.readableDatabase
         val result = db.rawQuery("SELECT * from " + WebOpenerDB.TABLE_URL.getValue(), null)
         if (result.moveToFirst()) {
             do {
-                list.add(result.getString(result.getColumnIndex(Table.Table_Url.URL.getValue())))
+                var urlData = URLData.Details(
+                    result.getString(result.getColumnIndex(Table.Table_Url.URL.getValue())),
+                    "",
+                    result.getString(result.getColumnIndex(Table.Table_Url.DAYS.getValue())),
+                    result.getString(result.getColumnIndex(Table.Table_Url.PAGES.getValue())),
+                    result.getString(result.getColumnIndex(Table.Table_Url.PAUSEFROM.getValue())),
+                    result.getString(result.getColumnIndex(Table.Table_Url.PAUSETO.getValue())),
+                )
+                val timeToMatch = Calendar.getInstance()
+                var currentHour = timeToMatch[Calendar.HOUR_OF_DAY]
+                var currentMinute = timeToMatch[Calendar.MINUTE]
+                var pauseFrom = urlData.pauseFrom.split(":").toTypedArray()
+                var pauseTo = urlData.pauseTo.split(":").toTypedArray()
+
+                if (pauseFrom[0].toInt() > currentHour || pauseTo[0].toInt() < currentHour) {
+                    if (pauseFrom[1].toInt() > currentMinute || pauseTo[1].toInt() < currentMinute) {
+                        list.add(urlData)
+                    }
+                }
             }while (result.moveToNext() )
         }
         db.close()
@@ -122,19 +150,6 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
                         result.getString(result.getColumnIndex(Table.Table_Range.RANGE_TO_LOAD.getValue())),
                         result.getString(result.getColumnIndex(Table.Table_Range.RANGE_OF_POST.getValue()))
                 )
-            }while (result.moveToNext() )
-        }
-        db.close()
-        return data
-    }
-
-    fun getFactor() : Int {
-        var data : Int = 0
-        val db = this.readableDatabase
-        val result = db.rawQuery("SELECT * from " + WebOpenerDB.TABLE_FACTOR.getValue(), null)
-        if (result.moveToFirst()) {
-            do {
-                data = result.getString(result.getColumnIndex(Table.Table_Factor.FACTOR.getValue())).toInt()
             }while (result.moveToNext() )
         }
         db.close()
