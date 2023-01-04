@@ -54,8 +54,8 @@ class MainActivity : AppCompatActivity(), GoogleSheetView {
         actionBar?.hide()
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         urlCheckerDialog = UrlCheckerDialog(this)
-        versionTxt.text = "Version 20221208.1"
-        //POG_lite_v.20221208.1
+        versionTxt.text = "Version 20230104.1"
+        //POG_lite_v.20230104.1
 
         bind()
     }

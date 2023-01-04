@@ -5,6 +5,8 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.icu.util.Calendar
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.generator.poglite.enum.Table
 import com.generator.poglite.enum.WebOpenerDB
 import com.generator.poglite.model.RangeData
@@ -91,6 +93,7 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
         return result != (-1).toLong()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     fun getURL() : MutableList<URLData.Details>{
         val list : MutableList<URLData.Details> = ArrayList()
         val db = this.readableDatabase
@@ -111,8 +114,8 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
                 var pauseFrom = urlData.pauseFrom.split(":").toTypedArray()
                 var pauseTo = urlData.pauseTo.split(":").toTypedArray()
 
-                if (pauseFrom[0].toInt() > currentHour || pauseTo[0].toInt() < currentHour) {
-                    if (pauseFrom[1].toInt() > currentMinute || pauseTo[1].toInt() < currentMinute) {
+                if (pauseFrom[0].toInt() >= currentHour || pauseTo[0].toInt() <= currentHour) {
+                    if (pauseFrom[1].toInt() >= currentMinute || pauseTo[1].toInt() <= currentMinute) {
                         list.add(urlData)
                     }
                 }

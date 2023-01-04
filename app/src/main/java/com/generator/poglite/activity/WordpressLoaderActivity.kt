@@ -1,6 +1,7 @@
 package com.generator.poglite.activity
 
 import android.annotation.SuppressLint
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -10,6 +11,7 @@ import android.view.View
 import android.view.WindowManager
 import android.webkit.WebStorage
 import android.widget.LinearLayout
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.generator.poglite.R
 import com.generator.poglite.adapter.LoaderAdapter
@@ -210,6 +212,7 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun bind() {
         setRecycler()
         urlData = db.getURL()
