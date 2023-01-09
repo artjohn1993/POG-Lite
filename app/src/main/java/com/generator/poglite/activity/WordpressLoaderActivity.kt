@@ -74,6 +74,7 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
         EventBus.getDefault().register(this)
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wordpress_loader)
@@ -116,6 +117,7 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
         return true
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun responseGetLatestPost(data: List<Wordpress.Result>) {
         wordpressData.prepareDownloadedData(data, page) { status ->
             when (status) {
@@ -149,6 +151,7 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun responseGetLatestPostFailed(data: String) {
         if (page != 1) {
             prepareToDisplay()
@@ -218,16 +221,25 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
         urlData = db.getURL()
         if (urlData.isEmpty()) {
             downloadingCon.visibility = View.GONE
-            Snackbar.make(
-                findViewById(android.R.id.content),
-                "URL not available at this time",
-                Snackbar.LENGTH_SHORT
-            ).show()
+            pauseMessage()
         } else {
             downloadWordpress()
         }
     }
 
+    private fun pauseMessage() {
+        Snackbar.make(
+            findViewById(android.R.id.content),
+            "All URL are currently paused.",
+            Snackbar.LENGTH_SHORT
+        ).show()
+
+        Handler().postDelayed({
+            finish()
+        }, 10000)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun downloadWordpress() {
         checkUrlData { item ->
             urlData = item
@@ -242,6 +254,7 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
             }
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun checkWordpressResponse(completionHandler: () -> Unit) {
         if (wordpressResponse.isEmpty()) {
             downloadWordpress()
@@ -262,12 +275,13 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
         loadedRecycler.adapter!!.notifyDataSetChanged()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun checkUrlData(completionHandler: (MutableList<URLData.Details>) -> Unit) {
         if (urlData.isEmpty()) {
             val timeToMatch = Calendar.getInstance()
             var currentHour = timeToMatch[Calendar.HOUR_OF_DAY]
 
-            if(currentHour == 24 || currentHour == 12) {
+            if(currentHour == 24 || currentHour == 12 || currentHour == 6 || currentHour == 18) {
                 finish()
             } else {
                 completionHandler.invoke(db.getURL())
