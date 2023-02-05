@@ -114,15 +114,32 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
                 var pauseFrom = urlData.pauseFrom.split(":").toTypedArray()
                 var pauseTo = urlData.pauseTo.split(":").toTypedArray()
 
-                if (pauseFrom[0].toInt() >= currentHour || pauseTo[0].toInt() <= currentHour) {
-                    if (pauseFrom[1].toInt() >= currentMinute || pauseTo[1].toInt() <= currentMinute) {
-                        list.add(urlData)
-                    }
+                if(!checkRange(pauseFrom, pauseTo, currentHour, currentMinute)) {
+                    list.add(urlData)
                 }
             }while (result.moveToNext() )
         }
         db.close()
         return list
+    }
+
+    fun checkRange(pauseFrom: Array<String>, pauseTo : Array<String> , currentHour: Int, currentMinute: Int) : Boolean {
+        if (currentHour in pauseFrom[0].toInt()..pauseTo[0].toInt()) {
+            if(currentHour == pauseFrom[0].toInt()) {
+                if(pauseFrom[1].toInt() > currentMinute) {
+                    return false
+                }
+            }
+            else if(currentHour == pauseTo[0].toInt()) {
+                if(pauseTo[1].toInt() < currentMinute) {
+                    return false
+                }
+            }
+
+            return true
+        }
+
+        return false
     }
 
     fun getWordpress() : MutableList<Wordpress.Result>{
