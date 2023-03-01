@@ -183,24 +183,18 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
         setAppTitle()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun prepareToDisplay() {
         downloadingCon.visibility = View.GONE
         page = 1
-        if (urlData[0].days == "0") {
-            var singleWordpress: MutableList<Wordpress.Result> = ArrayList()
-            for (i in 1..5) {
-                singleWordpress.add(Wordpress.Result("",urlData[0].url!!,"",Wordpress.Title("")))
-            }
-            wordpressResponse = wordpressData.factorWordpress(singleWordpress, urlData[0].pages.toInt(), true)
-        } else {
-            wordpressResponse = wordpressData.factorWordpress(wordpressRawResponse, urlData[0].pages.toInt(), false)
-        }
+        wordpressResponse = wordpressData.factorWordpress(wordpressRawResponse, urlData[0].pages.toInt(), false)
         urlData.removeAt(0)
         totalWordpress = wordpressResponse.count() / 2
         wordpressRawResponse.clear()
         displayWordpress()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun displayWordpress() {
         checkWordpressResponse {
             if (wordpressResponse[0].link != "about:blank") {
@@ -210,8 +204,6 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
             wordpressLoadUrl.add(0, wordpressResponse[0])
             wordpressResponse.removeAt(0)
             recyclerWordpressLoader.adapter!!.notifyDataSetChanged()
-//            recyclerWordpressLoader.scrollToPosition(wordpressLoadUrl.count() - 1)
-            //wordpressLoadUrl.removeAt(0)
         }
     }
 
@@ -244,13 +236,9 @@ class WordpressLoaderActivity : AppCompatActivity(), WordpressView {
         checkUrlData { item ->
             urlData = item
             resetWordpress()
-            if(urlData[0].days == "0") {
-                prepareToDisplay()
-            } else {
-                downloadingCon.visibility = View.VISIBLE
-                downloadingUrlTxt.text = urlData[0].url
-                presenter.getLatestPost("http://" + urlData[0].url + "/wp-json/wp/v2/posts?orderby=date&&page=${page}&&order=desc&&after=${calendar.getLastMonth(urlData[0].days)}")
-            }
+            downloadingCon.visibility = View.VISIBLE
+            downloadingUrlTxt.text = urlData[0].url
+            presenter.getLatestPost("http://" + urlData[0].url + "/wp-json/wp/v2/posts?orderby=date&&page=${page}&&order=desc&&after=${calendar.getLastMonth("30")}")
             }
     }
 

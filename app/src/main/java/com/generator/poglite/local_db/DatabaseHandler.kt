@@ -17,10 +17,7 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("CREATE TABLE " + WebOpenerDB.TABLE_URL.getValue() + " (" +
                 Table.Table_Url.URL.getValue() + " VARCHAR(200)," +
-                Table.Table_Url.DAYS.getValue() + " VARCHAR(200)," +
-                Table.Table_Url.PAGES.getValue() + " VARCHAR(200)," +
-                Table.Table_Url.PAUSEFROM.getValue() + " VARCHAR(200)," +
-                Table.Table_Url.PAUSETO.getValue() + " VARCHAR(200))"
+                Table.Table_Url.PAGES.getValue() + " VARCHAR(200))"
         )
 
         db?.execSQL("CREATE TABLE " + WebOpenerDB.TABLE_FACTOR.getValue() + " (" +
@@ -49,10 +46,7 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
         var url = ContentValues()
 
         url.put(Table.Table_Url.URL.getValue(), data.url)
-        url.put(Table.Table_Url.DAYS.getValue(), data.days)
         url.put(Table.Table_Url.PAGES.getValue(), data.pages)
-        url.put(Table.Table_Url.PAUSEFROM.getValue(), data.pauseFrom)
-        url.put(Table.Table_Url.PAUSETO.getValue(), data.pauseTo)
         var result = db.insert(WebOpenerDB.TABLE_URL.getValue(), null , url)
         db.close()
         return result != (-1).toLong()
@@ -103,20 +97,9 @@ class DatabaseHandler(val context : Context) : SQLiteOpenHelper(context, WebOpen
                 var urlData = URLData.Details(
                     result.getString(result.getColumnIndex(Table.Table_Url.URL.getValue())),
                     "",
-                    result.getString(result.getColumnIndex(Table.Table_Url.DAYS.getValue())),
-                    result.getString(result.getColumnIndex(Table.Table_Url.PAGES.getValue())),
-                    result.getString(result.getColumnIndex(Table.Table_Url.PAUSEFROM.getValue())),
-                    result.getString(result.getColumnIndex(Table.Table_Url.PAUSETO.getValue())),
+                    result.getString(result.getColumnIndex(Table.Table_Url.PAGES.getValue()))
                 )
-                val timeToMatch = Calendar.getInstance()
-                var currentHour = timeToMatch[Calendar.HOUR_OF_DAY]
-                var currentMinute = timeToMatch[Calendar.MINUTE]
-                var pauseFrom = urlData.pauseFrom.split(":").toTypedArray()
-                var pauseTo = urlData.pauseTo.split(":").toTypedArray()
-
-                if(!checkRange(pauseFrom, pauseTo, currentHour, currentMinute)) {
-                    list.add(urlData)
-                }
+                list.add(urlData)
             }while (result.moveToNext() )
         }
         db.close()

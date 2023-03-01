@@ -54,8 +54,8 @@ class MainActivity : AppCompatActivity(), GoogleSheetView {
         actionBar?.hide()
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         urlCheckerDialog = UrlCheckerDialog(this)
-        versionTxt.text = "Version 20230205.1"
-        //POG_lite_v.20230205.1
+        versionTxt.text = "Version 20230301.1"
+        //POG_lite_v.20230301.1
 
         bind()
     }
@@ -160,7 +160,7 @@ class MainActivity : AppCompatActivity(), GoogleSheetView {
         presenter.getUrl("https://sheets.googleapis.com/v4/spreadsheets/13vq1wyaG7x9bPYak0OgYHspq14RAb60zvMNled9MyYs/values/pageone?dateTimeRenderOption=FORMATTED_STRING&majorDimension=ROWS&valueRenderOption=FORMATTED_VALUE&key=AIzaSyAdETbAw9fqHW5wCv5Hnipoc1kvGmCEfoA")
     }
 
-    private fun addURLEditText(url: String?,days: String = "", pages:String = "", pauseFrom:String ="", pauseTo:String = "" ) {
+    private fun addURLEditText(url: String?, pages:String = "") {
         addURL.text = "add URL (${++total})"
         var editText = EditText(this)
         var layout = LinearLayout.LayoutParams(
@@ -175,10 +175,7 @@ class MainActivity : AppCompatActivity(), GoogleSheetView {
         var data = URLData.Details(
             url,
             editText.id.toString(),
-            days,
             pages,
-            pauseFrom,
-            pauseTo
         )
         urlData.add(data)
         editText.addTextChangedListener(object : TextWatcher {
@@ -200,7 +197,7 @@ class MainActivity : AppCompatActivity(), GoogleSheetView {
         urlData.forEach { data ->
             index++
             if (id == data.id) {
-                var newData = URLData.Details(url, id,"","","","")
+                var newData = URLData.Details(url, id,"")
                 urlData[index] = newData
             }
         }
@@ -215,7 +212,7 @@ class MainActivity : AppCompatActivity(), GoogleSheetView {
 
         googleSheet = data
         data.values.forEach { item ->
-            addURLEditText(item[0],item[1],item[2],item[3], item[4] )
+            addURLEditText(item[0],item[1])
         }
         saveUrl()
         saveFactor()
